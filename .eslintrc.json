@@ -1,0 +1,34 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "react-app",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11
+    },
+    "plugins": [
+        "react", "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+              "printWidth": 80,
+              "trailingComma": "es5",
+              "semi": true,
+              "jsxSingleQuote": false,
+              "singleQuote": true,
+              "useTabs": true
+            }
+          ]
+    }
+}
