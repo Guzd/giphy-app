@@ -1,24 +1,22 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 class SearchBar extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Form>
-					<Row>
-						<Col xs={8}>
-							<FormControl type="text" placeholder="Search" />
-						</Col>
-						<Col xs={true}>
-							<Button variant="outline-primary">Search</Button>
-						</Col>
-					</Row>
-				</Form>
+				<InputGroup className="mb-3">
+					<FormControl
+						placeholder="Search gif"
+						aria-label="Search gif"
+						aria-describedby="basic-addon2"
+					/>
+					<InputGroup.Append>
+						<Button variant="outline-secondary">Button</Button>
+					</InputGroup.Append>
+				</InputGroup>
 			</React.Fragment>
 		);
 	}
