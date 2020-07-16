@@ -4,6 +4,9 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 class SearchBar extends React.Component {
+	handleChange(input) {
+		console.log(input);
+	}
 	render() {
 		return (
 			<React.Fragment>
@@ -12,6 +15,7 @@ class SearchBar extends React.Component {
 						placeholder="Search gif"
 						aria-label="Search gif"
 						aria-describedby="basic-addon2"
+						onChange={(event) => this.handleChange(event.target.value)}
 					/>
 					<InputGroup.Append>
 						<Button variant="outline-secondary">Button</Button>
