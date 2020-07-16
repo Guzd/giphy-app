@@ -1,11 +1,16 @@
+//@flow
 import React from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-class SearchBar extends React.Component {
-	handleChange(input) {
-		console.log(input);
+type searchProps = {
+	onSearchInputChange: (input: string) => {},
+};
+
+class SearchBar extends React.Component<searchProps> {
+	handleChange(input: string) {
+		this.props.onSearchInputChange(input);
 	}
 	render() {
 		return (

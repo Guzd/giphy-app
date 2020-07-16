@@ -1,15 +1,17 @@
 //@flow
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as Actions from '../actions';
 import Container from 'react-bootstrap/Container';
 import NavBar from '../components/NavBar.js';
 import SearchBar from '../components/Search.js';
-import List from '../components/gif-list.js';
+import GifList from '../components/GifList.js';
 import '../styles/App.css';
 
 type testProps = {
-	name: string,
 	gifs: Array<Object>,
+	actions: Object,
 };
 class App extends React.Component<testProps> {
 	render() {
@@ -17,9 +19,9 @@ class App extends React.Component<testProps> {
 			<React.Fragment>
 				<NavBar />
 				<Container fluid>
-					<h1>Hello {this.props.name}</h1>
-					<SearchBar />
-					<List gifList={this.props.gifs} />
+					<h1>Hello</h1>
+					<SearchBar onSearchInputChange={this.props.actions.fetchGifs} />
+					<GifList gifList={this.props.gifs} />
 				</Container>
 			</React.Fragment>
 		);
@@ -27,8 +29,14 @@ class App extends React.Component<testProps> {
 }
 function mapStateToProps(state) {
 	return {
-		gifs: state.gifs,
+		gifs: state.gifs.data,
 	};
 }
 
-export default connect(mapStateToProps)(App);
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(Actions, dispatch),
+	};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
