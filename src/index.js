@@ -7,7 +7,7 @@ import App from './containers/App';
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App name="World" />
+		<App />
 	</Provider>,
 	document.getElementById('root')
 );

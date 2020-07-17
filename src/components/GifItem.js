@@ -7,7 +7,7 @@ type itemProps = {
 
 function GiftItem(props: itemProps) {
 	return (
-		<Col xs="12" sm="auto" className="d-flex justify-content-center">
+		<Col xs={12}>
 			<img src={props.gif} alt="" />
 		</Col>
 	);
