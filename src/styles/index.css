@@ -16,3 +16,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.gifItem {
+  width:100%;
+  margin:auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap:0.5em;
+  grid-gap: 2px;
+  grid-row: auto /span 2;
+  grid-column:auto / span 1;
+  grid-auto-flow: dense;
+}
+
+.gif {
+  width: 100% ;
+  max-height: 500px;
+}
+
+@media screen and (min-width: 400px) {
+  .gifItem{
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+  }
+  .gif {
+    max-height: 100px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .gifItem{
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+  }
+  .gif {
+    max-height: 140px;
+  }
+}

@@ -4,6 +4,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+// import { connect } from 'react-redux';
+// import { fetchGifs } from '../actions';
 
 type searchProps = {
 	onSearchInputChange: (input: string) => {},
@@ -24,6 +26,7 @@ class SearchBar extends React.Component<searchProps> {
 	handleSubmit(e) {
 		e.preventDefault();
 		this.props.onSearchInputChange(this.state.query);
+		// this.props.dispatch(fetchGifs(this.state.query));
 	}
 	render() {
 		return (
