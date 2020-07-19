@@ -1,6 +1,6 @@
 //@flow
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as Actions from '../actions';
@@ -13,6 +13,7 @@ import SearchBar from '../components/Search.js';
 import GifList from '../components/GifList.js';
 import BoxModal from '../components/modal.js';
 import Footer from '../components/Footer.js';
+import ResultsFor from '../components/ResultsFor.js';
 
 import '../styles/App.css';
 type testProps = {
@@ -20,6 +21,7 @@ type testProps = {
 	actions: Object,
 	modalStatus: Boolean,
 	gifSelected: String,
+	term: String,
 };
 
 class App extends React.Component<testProps> {
@@ -38,7 +40,7 @@ class App extends React.Component<testProps> {
 								<p className="display-4 text-light font-weight-bold">GIPHY</p>
 							</Col>
 						</Row>
-						<Row className="justify-content-center mb-3">
+						<Row className="justify-content-center">
 							<Col xs={12} md={8}>
 								<SearchBar onSearchInputChange={this.props.actions.fetchGifs} />
 							</Col>
@@ -46,6 +48,9 @@ class App extends React.Component<testProps> {
 					</Container>
 				</Jumbotron>
 				<Container>
+					<Row>
+						<ResultsFor term={this.props.term} />
+					</Row>
 					<Row>
 						<Col xs={12}>
 							<GifList
@@ -70,6 +75,7 @@ class App extends React.Component<testProps> {
 function mapStateToProps(state) {
 	return {
 		gifs: state.gifs.data,
+		term: state.gifs.term,
 		modalStatus: state.modal.modalStatus,
 		gifSelected: state.modal.gifSelected,
 	};

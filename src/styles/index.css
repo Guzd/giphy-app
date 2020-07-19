@@ -19,7 +19,7 @@ code {
 
 .jumbotron {
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   background-color: #1c1e22;
   border-radius: 0.0rem;
 }
@@ -34,6 +34,10 @@ code {
   grid-row: auto /span 2;
   grid-column:auto / span 1;
   grid-auto-flow: dense;
+}
+
+.resultsfor {
+  font-size: 2em;
 }
 
 .gif {
