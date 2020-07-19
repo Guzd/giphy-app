@@ -15,6 +15,7 @@ export function fetchGifs(query: string = '') {
 		'+'
 	)}&${API_KEY}&limit=20`;
 	URL = query === '' ? URL_TRENDY : URL_SEARCH;
+
 	return (dispatch) => {
 		dispatch(queryAction(query));
 		fetch(URL)

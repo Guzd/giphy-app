@@ -13,7 +13,6 @@ type boxModalTypes = {
 };
 
 function BoxModal(props: boxModalTypes) {
-	console.log(props.gifSelected);
 	if (!props.gifSelected) {
 		return <div></div>;
 	}

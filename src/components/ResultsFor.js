@@ -6,7 +6,7 @@ type resultsForType = {
 };
 const ResultsFor = (props: resultsForType) => {
 	if (props.term === '') {
-		return <p className="lead font-weight-bold resultsfor">Trendy</p>;
+		return <p className="lead font-weight-bold resultsfor">Trendy gifs</p>;
 	}
 	return (
 		<p className="lead  resultsfor">

@@ -17,7 +17,6 @@ const GifList = (props: listProps) => {
 	});
 	return (
 		<Col>
-			<h2>{props.resultsFor}</h2>
 			<div className="gifItem">{gifItems}</div>
 		</Col>
 	);

@@ -15,9 +15,6 @@ const NavBar = (filter: string) => {
 						<Link className="nav-link" to="/">
 							Home
 						</Link>
-						<Link className="nav-link" to="/random">
-							Random
-						</Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
