@@ -6,11 +6,14 @@ import Col from 'react-bootstrap/Row';
 type listProps = {
 	gifList: Array<Object>,
 	resultsFor: string,
+	ifGifSelect: () => {},
 };
 
 const GifList = (props: listProps) => {
 	const gifItems = props.gifList.map((item) => {
-		return <GifItem key={item.id} gif={item.images.downsized.url} />;
+		return (
+			<GifItem key={item.id} gif={item} ifGifSelected={props.ifGifSelect} />
+		);
 	});
 	return (
 		<Col>
