@@ -6,6 +6,16 @@ This basic gif search engine app was develop with ReactJ, Redux  and it consumes
 
 Live demo: https://limitless-bastion-82519.herokuapp.com/
 
+Mobile:
+![Mobile demo](public/demo/heruxgiphy-mobile.jpg)
+
+Medium size:
+![Mobile demo](public/demo/heruxgiphy-medium.jpg)
+
+Desktop:
+![Mobile demo](public/demo/heruxgiphy-desktop.jpg)
+
+
 
 ## Installation
 
