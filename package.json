@@ -5,7 +5,7 @@
   "engines": {
     "npm": "6.11.3",
     "node": "12.10.0",
-    "yarn": "1.19.1" 
+    "yarn": "1.19.1"
   },
   "author": "Diana Gutierrez",
   "license": "ISC",
@@ -26,12 +26,12 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
-  "web": "node index.js",
   "scripts": {
     "start": "node index.js",
     "build": "react-scripts build",
-    "heroku-postbuild": "npm run build",
-     "test": "react-scripts test",
+    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
+    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "eslint-check": "eslint --print-config src/App.js | eslint-config-prettier-check",
     "precommit": "lint-staged"
