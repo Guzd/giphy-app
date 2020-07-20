@@ -14,7 +14,11 @@ export function fetchGifs(query: string = '') {
 		/\s/g,
 		'+'
 	)}&${API_KEY}&limit=20`;
-	URL = query === '' ? URL_TRENDY : URL_SEARCH;
+	if (query === '' || null) {
+		URL = URL_TRENDY;
+	} else {
+		URL = URL_SEARCH;
+	}
 	return (dispatch) => {
 		dispatch(queryAction(query));
 		fetch(URL)
