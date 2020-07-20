@@ -27,12 +27,14 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "heroku-postbuild": "npm run build",
+     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "eslint-check": "eslint --print-config src/App.js | eslint-config-prettier-check",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "dev": "react-scripts start",
   },
   "eslintConfig": {
     "extends": "react-app"
