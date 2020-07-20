@@ -2,6 +2,10 @@
   "name": "giphy-search-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.11.3",
+    "node": "12,10,0" 
+  },
   "author": "Diana Gutierrez",
   "license": "ISC",
   "dependencies": {
