@@ -26,8 +26,9 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
+  "web": "node index.js",
   "scripts": {
-    "start": "npm run build",
+    "start": "node index.js",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build",
      "test": "react-scripts test",
