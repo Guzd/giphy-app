@@ -1,4 +1,4 @@
-#HERUxGIPHY APP
+# HERUxGIPHY APP
 
 This basic gif search engine app was develop with ReactJ, Redux  and it consumes Giphy API. 
 
