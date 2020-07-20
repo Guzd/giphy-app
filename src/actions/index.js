@@ -4,7 +4,7 @@ export const MODAL_ON = 'MODAL_ON';
 export const MODAL_OFF = 'MODAL_OFF';
 export const TERM = 'TERM';
 
-const GIPHY_API = 'http://api.giphy.com/v1/gifs/';
+const GIPHY_API = 'https://api.giphy.com/v1/gifs/';
 const API_KEY = 'api_key=o5itTJKYKT1U5XwoRLYJVYYidofqLPsU';
 
 export function fetchGifs(query: string = '') {
