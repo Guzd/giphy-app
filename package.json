@@ -27,7 +27,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "serve -s build",
+    "start": "npm run build",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build",
      "test": "react-scripts test",
