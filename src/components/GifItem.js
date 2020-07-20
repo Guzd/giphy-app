@@ -1,8 +1,8 @@
 //@flow
 import React from 'react';
 type itemProps = {
-	gif: string,
-	ifGifSelected: () => {},
+	gif: Object,
+	ifGifSelected: (props: Object) => {},
 };
 
 function GiftItem(props: itemProps) {

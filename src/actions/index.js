@@ -15,7 +15,6 @@ export function fetchGifs(query: string = '') {
 		'+'
 	)}&${API_KEY}&limit=20`;
 	URL = query === '' ? URL_TRENDY : URL_SEARCH;
-
 	return (dispatch) => {
 		dispatch(queryAction(query));
 		fetch(URL)
@@ -40,7 +39,7 @@ const queryAction = (query) => {
 		payload: query,
 	};
 };
-export function openModal(gif) {
+export function openModal(gif: Object) {
 	return {
 		type: MODAL_ON,
 		payload: gif,

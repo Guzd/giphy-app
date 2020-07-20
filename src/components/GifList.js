@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Row';
 
 type listProps = {
 	gifList: Array<Object>,
-	resultsFor: string,
 	ifGifSelect: () => {},
 };
 

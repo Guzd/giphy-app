@@ -4,29 +4,28 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-// import { connect } from 'react-redux';
-// import { fetchGifs } from '../actions';
 
-type searchProps = {
-	onSearchInputChange: (input: string) => {},
+type Props = {
+	onSearchInputChange: (input: String) => any,
 };
 
-class SearchBar extends React.Component<searchProps> {
-	constructor() {
-		super();
-		this.state = {
-			query: '',
-		};
+type State = {
+	query: String,
+};
+
+class SearchBar extends React.Component<Props, State> {
+	constructor(props: any) {
+		super(props);
+		this.state = { query: '' };
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleChange(input: string) {
+	handleChange(input: String) {
 		this.setState({ query: input });
 	}
-	handleSubmit(e) {
+	handleSubmit(e: any) {
 		e.preventDefault();
 		this.props.onSearchInputChange(this.state.query);
-		// this.props.dispatch(fetchGifs(this.state.query));
 	}
 	render() {
 		return (
